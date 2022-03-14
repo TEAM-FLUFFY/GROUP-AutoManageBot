@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import CallbackQuery
 import random
 
 Dev=Client(
@@ -30,7 +31,7 @@ async def start_message(bot, message):
           InlineKeyboardButton ("©️ℙ𝔸𝕀𝔻 ℙℝ𝕆𝕄𝕆𝕋𝕀𝕆ℕ", url="t.me/pushpa_Reju"),
           ],[
           InlineKeyboardButton ("👨‍💻𝔻𝔼𝕍𝔼𝕃𝕆ℙ𝔼ℝ👨‍💻", url="t.me/TEAM_KERALA"),
-          InlineKeyboardButton ("🟡𝔹ℝ𝕆𝕋ℍ𝔼ℝ 𝔹𝕆𝕋🟡", url="t.me/SAZUKI_FILTER_BOT"),
+          InlineKeyboardButton ("help", callback_data="song"),
           ],[
           InlineKeyboardButton ("⚜️𝔸𝔻𝔻 𝕄𝔼 𝕋𝕆 𝔸 ℂℍ𝔸𝕋 𝔾ℝ𝕆𝕌ℙ⚜️", url="http://t.me/FluffyPyroGramBot?startgroup=true"),
           ]]
@@ -39,7 +40,30 @@ async def start_message(bot, message):
         )
     
            
-           
-       
+
+@Dev.on_callback_query()
+async def callback(bot,query:  CallbackQuery):
+    if query.data == "song":
+        await query.message.edit(
+           text="""🎼Song Download🎼
+Song Download Module, For Those Who Love Music
+
+🎈 Command 🎈
+
+- /song [Song Name] - To Download Music 😁
+
+🌀Usage🌀
+- Can Be Used By Everyone
+- Works in bot pm
+𝙃𝙚𝙡𝙥 𝙁𝙤𝙧 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝘼𝙣𝙮 𝙑𝙞𝙙𝙚𝙤 𝙁𝙧𝙤𝙢 𝙔𝙏.
+
+• 𝘜𝘴𝘢𝘨𝘦
+𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
+
+𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
+• 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (𝘝𝘪𝘥𝘦𝘰 Link)
+• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
+/𝘮𝘱4 https://youtu.be/Your Link"""
+        )    
               
 Dev.run()
