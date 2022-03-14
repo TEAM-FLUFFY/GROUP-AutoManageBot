@@ -12,10 +12,11 @@ Dev=Client(
 
 
 ALL_PIC = [
- "https://telegra.ph/file/5f51546ad227831b96a38.jpg",
- "https://telegra.ph/file/56e2c12ed686eeb4513da.jpg",
- "https://telegra.ph/file/266fec5cf211151997303.jpg",
- "https://telegra.ph/file/13527c7b40976c1368cca.jpg"
+ "https://telegra.ph/file/52b71d5a61c904c6a59d1.jpg",
+ "https://telegra.ph/file/28a00384a3be4f6c916ba.jpg",
+ "https://telegra.ph/file/eb654e5c7ff4d29eab29f.jpg",
+ "https://telegra.ph/file/a4796bdcca7ff90a3a3b8.jpg",
+ "https://telegra.ph/file/b7b43793368770ca4c7fb.jpg"
 ]
 
 @Dev.on_message(filters.command("start"))
@@ -45,13 +46,7 @@ async def start_message(bot, message):
 async def callback(bot,query:  CallbackQuery):
     if query.data == "song":
         await query.message.edit(
-           text="InlineKeyboardButton ("help", callback_data="help")
-
-@Dev.on_callback_query()
-async def callback(bot,query:  CallbackQuery):
-    if query.data == "help":
-        await query.message.edit(
-           text="hi")
+           text="hi)
     
         )    
               
