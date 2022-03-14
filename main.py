@@ -45,25 +45,14 @@ async def start_message(bot, message):
 async def callback(bot,query:  CallbackQuery):
     if query.data == "song":
         await query.message.edit(
-           text="""🎼Song Download🎼
-Song Download Module, For Those Who Love Music
+           text="InlineKeyboardButton ("help", callback_data="help")
 
-🎈 Command 🎈
-
-- /song [Song Name] - To Download Music 😁
-
-🌀Usage🌀
-- Can Be Used By Everyone
-- Works in bot pm
-𝙃𝙚𝙡𝙥 𝙁𝙤𝙧 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝘼𝙣𝙮 𝙑𝙞𝙙𝙚𝙤 𝙁𝙧𝙤𝙢 𝙔𝙏.
-
-• 𝘜𝘴𝘢𝘨𝘦
-𝘠𝘰𝘶 𝘊𝘢𝘯 𝘋𝘰𝘸𝘯𝘭𝘰𝘢𝘥 𝘈𝘯𝘺 𝘝𝘪𝘥𝘦𝘰 𝘍𝘳𝘰𝘮 𝘠𝘰𝘶𝘵𝘶𝘣𝘦
-
-𝙃𝙤𝙬 𝙏𝙤 𝙐𝙨𝙚
-• 𝘛𝘺𝘱𝘦 /video or /mp4 𝘈𝘯𝘥 (𝘝𝘪𝘥𝘦𝘰 Link)
-• 𝘌𝘹𝘢𝘮𝘱𝘭𝘦:
-/𝘮𝘱4 https://youtu.be/Your Link"""
+@Dev.on_callback_query()
+async def callback(bot,query:  CallbackQuery):
+    if query.data == "help":
+        await query.message.edit(
+           text="hi")
+    
         )    
               
 Dev.run()
