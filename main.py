@@ -46,7 +46,7 @@ async def start_message(bot, message):
 async def callback(bot,query:  CallbackQuery):
     if query.data == "song":
         await query.message.edit(
-           text="hi)
+           text="hi"
     
         )    
               
