@@ -1,6 +1,6 @@
 from pyrogram import Client
 
-PyrogramBot = Client(
+Client = Client(
     "PyrogramBot",
     api_hash="d9647913e97bf2f6a66d978290284028",
     api_id="17946666",
@@ -8,4 +8,4 @@ PyrogramBot = Client(
     plugins=dict(root="PyrogramBot")
 )
 
-PyrogramBot.run()
+Client.run()
