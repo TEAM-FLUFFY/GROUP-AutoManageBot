@@ -46,18 +46,6 @@ async def start_message(bot, message):
 async def callback(bot,query:  CallbackQuery):
     if query.data == "song":
         await query.message.edit_text(
-            text="△  △  △"
-        )
-        await query.message.edit_text(
-            text="▲  △  △"
-        )
-        await query.message.edit_text(
-            text="▲  ▲  △"
-        )
-        await query.message.edit_text(
-            text="▲  ▲  ▲"
-        )
-        await query.message.edit_text(
             text="ˣˣˣ 𝑡𝑒𝑛𝑡𝑎𝑐𝑡𝑖𝑜𝑛"   
         )    
               
