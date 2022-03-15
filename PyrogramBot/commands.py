@@ -54,4 +54,4 @@ By Using This Module You can store files in My database and I will You A Permane
 `/batch https://t.me/c/1749754594/332 https://t.me/c/1749754594/336`"""   
         )    
               
-Dev.run()
+Client.run()
