@@ -3,6 +3,14 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery
 import random
 
+Dev=Client(
+      "PG",
+      bot_token="5125014420:AAEK2E9aj-q9FHZknW_hrisJvCuONx0XPtU",
+      api_id="17946666",
+      api_hash="d9647913e97bf2f6a66d978290284028",
+)
+
+
 ALL_PIC = [
  "https://telegra.ph/file/52b71d5a61c904c6a59d1.jpg",
  "https://telegra.ph/file/28a00384a3be4f6c916ba.jpg",
@@ -31,7 +39,9 @@ async def start_message(bot, message):
           )
           
         )
-             
+    
+           
+
 @Dev.on_callback_query()
 async def callback(bot,query:  CallbackQuery):
     if query.data == "song":
