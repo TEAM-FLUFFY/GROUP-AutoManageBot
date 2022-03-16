@@ -44,7 +44,7 @@ Last Update : {last_update}
 Latitude : {latitude}
 Longitude : {longitude}
 Recovered : {recovered}
-Made by @pushpa_Reju ❤️"""
+Made by @ATHIF_E_F_X_P_G_OFFLINE ❤️"""
         return covid_info
     except Exception as error:
         return error
