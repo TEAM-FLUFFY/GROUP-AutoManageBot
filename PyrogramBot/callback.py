@@ -9,7 +9,7 @@ async def cb(bot, msg):
 
 
 @Client.on_callback_query()
-async def callback(bot,query: CallbackQuery):
+async def callback(bot,query: callbackquery):
     if query.data == "song":
         await query.message.edit_text(
             text="""➤ 𝐇𝐞𝐥𝐩: 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫𝐞 𝐌𝐨𝐝𝐮𝐥𝐞../
