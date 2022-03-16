@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 API = "https://api.sumanjay.cf/covid/?country="
 
-BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/updatechannel_forcrime')]])
+BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton('𝑔𝑟𝑜𝑢𝑝', url='https://t.me/M_O_V_I_E_WORLD')]])
 
 
 @Client.on_message(filters.command("covid"))
