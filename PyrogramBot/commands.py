@@ -38,7 +38,7 @@ async def callback(bot,query: CallbackQuery):
 
 
 
-    elif msg.data == "help"
+    elif msg.data == "hey"
         await msg.message.edit(
             text="""InlineKeyboardButton("covid", callback_data="covid"
         )
