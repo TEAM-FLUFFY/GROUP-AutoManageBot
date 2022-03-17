@@ -16,7 +16,7 @@ ALL_PIC = [
 async def start_message(bot, message):
     await message.reply_photo(
         photo=random.choice(ALL_PIC),
-        caption="ℎ𝑒𝑦 𝑑𝑒𝑎𝑟 {user.mention}",
+        caption="ℎ𝑒𝑦 𝑑𝑒𝑎𝑟 {message.from_user.mention}",
         reply_markup=InlineKeyboardMarkup( [[
           InlineKeyboardButton ("𝑎𝑑𝑑 𝑚𝑒 𝑡𝑜 𝑦𝑜𝑢𝑟 𝑐ℎ𝑎𝑡", url="http://t.me/EFX_pyrogramBot?startgroup=true"),
           ],[
@@ -49,8 +49,8 @@ async def callback(bot,query: CallbackQuery):
         )
          await query.message.edit_text(
             text="⦿ ⦿ ⦿ ⦿ ⦿"
-
-            await query.message.edit_text(
+        )
+         await query.message.edit_text(
             text="""➤ 𝐇𝐞𝐥𝐩: 𝖢𝗈𝗏𝗂𝖽
 
 𝚃𝚑𝚒𝚜 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚑𝚎𝚕𝚙𝚜 𝚢𝚘𝚞 𝚝𝚘 𝚔𝚗𝚘𝚠 𝚍𝚊𝚒𝚕𝚢 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚋𝚘𝚞𝚝 𝚌𝚘𝚟𝚒𝚍 
