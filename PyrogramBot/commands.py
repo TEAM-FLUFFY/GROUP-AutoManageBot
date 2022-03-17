@@ -52,6 +52,4 @@ By Using This Module You can store files in My database and I will You A Permane
 ⪼ 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 ›
 
 `/batch https://t.me/c/1749754594/332 https://t.me/c/1749754594/336`"""   
-        )    
-              
-Client.run()
+        )
