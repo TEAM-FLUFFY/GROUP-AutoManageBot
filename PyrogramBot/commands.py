@@ -43,4 +43,4 @@ async def callback(bot,query: CallbackQuery):
 
 ➛𝖤𝗑𝖺𝗆𝗉𝗅𝖾:
 `/covid 𝖨𝗇𝖽𝗂𝖺`"""   
-        )
+      )
