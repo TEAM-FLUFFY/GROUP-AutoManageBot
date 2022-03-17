@@ -23,25 +23,22 @@ async def start_message(bot, message):
           InlineKeyboardButton ("𝑐ℎ𝑎𝑛𝑛𝑒𝑙", url="https://t.me/MWcinemase"),
           InlineKeyboardButton ("𝑑𝑒𝑣", url="https://t.me/ATHIF_E_F_X_P_G_OFFLINE"),
           ],[
-          InlineKeyboardButton ("ℎ𝑒𝑙𝑝", callback_data="hellp"),
+          InlineKeyboardButton ("ℎ𝑒𝑙𝑝", callback_data="help"),
           ]]
           )
           
         )
 
-
 @Client.on_callback_query()
 async def callback(bot,query: CallbackQuery):
-    if query.data == "hellp":
+    if query.data == "help":
         await query.message.edit_text(
-            text="""➤ 𝐇𝐞𝐥𝐩: 𝖢𝗈𝗏𝗂𝖽
+            text="""InlineKeyboardButton("Song", callback_data="help"""   
+        )
 
-𝚃𝚑𝚒𝚜 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚑𝚎𝚕𝚙𝚜 𝚢𝚘𝚞 𝚝𝚘 𝚔𝚗𝚘𝚠 𝚍𝚊𝚒𝚕𝚢 𝚒𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚋𝚘𝚞𝚝 𝚌𝚘𝚟𝚒𝚍 
 
-➤ 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐧𝐝 𝐔𝐬𝐚𝐠𝐞:
 
-➪ /covid - 𝗎𝗌𝖾 𝗍𝗁𝗂𝗌 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝗐𝗂𝗍𝗁 𝗒𝗈𝗎𝗋 𝖼𝗈𝗎𝗇𝗍𝗋𝗒 𝗇𝖺𝗆𝖾 𝗍𝗈 𝗀𝖾𝗍 𝖼𝗈𝗏𝗂𝖽𝖾 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇
-
-➛𝖤𝗑𝖺𝗆𝗉𝗅𝖾:
-/covid 𝖨𝗇𝖽𝗂𝖺"""   
+    elif msg.data == "help"
+        await msg.message.edit(
+            text="""InlineKeyboardButton("covid", callback_data="covid"
         )
