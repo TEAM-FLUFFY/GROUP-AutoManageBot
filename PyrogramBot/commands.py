@@ -1,38 +1,40 @@
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.types import CallbackQuery
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 import random
 
 
-ALL_PIC = [
- "https://telegra.ph/file/52b71d5a61c904c6a59d1.jpg",
- "https://telegra.ph/file/28a00384a3be4f6c916ba.jpg",
- "https://telegra.ph/file/eb654e5c7ff4d29eab29f.jpg",
- "https://telegra.ph/file/a4796bdcca7ff90a3a3b8.jpg",
- "https://telegra.ph/file/b7b43793368770ca4c7fb.jpg"
-]
 
-@Naruto.on_message(filters.command("start"))
-async def start_message(bot, message):
-    await message.reply_photo(
-        photo=random.choice(ALL_PIC),
-        caption="എന്റെ പേര് <a href=https://t.me/FluffyPyroGramBot>𝙵𝙻𝚄𝙵𝙵𝚈 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼</a>, 🔰മച്ചാനെ എന്റെ പണി കഴിഞ്ഞിട്ടില്ല അതുകൊണ്ട് RePo✅️ പ്രൈവറ്റ് ആണ് Work കഴിഞ്ഞിട്ട് public ആക്കും ",
+
+START_MESSAGE= """
+ℎ𝑒𝑦 𝑑𝑒𝑎𝑟 {} 𝑏𝑟𝑜 𝑖𝑎𝑚 𝑇𝑔𝑟𝑎𝑝ℎ 𝑉2𝑏𝑜𝑡
+"""
+
+
+
+
+@Client.on_message(filters.command("start"))
+async def start_cmd(bot, msg):
+    await msg.reply_photo(
+        photo="https://telegra.ph/file/6c890b13e27c0f219a015.jpg"
+    )
+
+
+
+
+
+    await msg.reply_text(
+        text=START_MESSAGE.format(msg.from_user.mention),
         reply_markup=InlineKeyboardMarkup( [[
-          InlineKeyboardButton ("🗨️𝔾ℝ𝕆𝕌ℙ🗨️", url="https://t.me/DEVELOPERSCHANNEL2022"),
-          InlineKeyboardButton ("📂ℂℍ𝔸ℕℕ𝔼𝕃📂", url="https://t.me/DELCHANNEL001"),
-          ],[
-          InlineKeyboardButton ("🔰𝔼𝔻𝕀𝕋𝔼ℝ🔰", url="t.me/TEAM_KERALA"),
-          InlineKeyboardButton ("©️ℙ𝔸𝕀𝔻 ℙℝ𝕆𝕄𝕆𝕋𝕀𝕆ℕ", url="t.me/pushpa_Reju"),
-          ],[
-          InlineKeyboardButton ("👨‍💻𝔻𝔼𝕍𝔼𝕃𝕆ℙ𝔼ℝ👨‍💻", url="t.me/TEAM_KERALA"),
-          InlineKeyboardButton ("🟡𝔹ℝ𝕆𝕋ℍ𝔼ℝ 𝔹𝕆𝕋🟡", url="t.me/SAZUKI_FILTER_BOT"),
-          ],[
-          InlineKeyboardButton ("⚜️𝔸𝔻𝔻 𝕄𝔼 𝕋𝕆 𝔸 ℂℍ𝔸𝕋 𝔾ℝ𝕆𝕌ℙ⚜️", url="http://t.me/FluffyPyroGramBot?startgroup=true"),
-          ]]
-          )
-          
+            InlineKeyboardButton("𝙳𝙴𝚅", url="https://t.me/KAAVAL_KAARAN_tg"),
+            InlineKeyboardButton("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴?", callback_data="use") 
+            ]]
+            )
         )
-    
-           
 
 
+
+@Client.on_callback_query()
+async def cb(bot, msg):
+    if msg.data == "use":
+        await msg.answer("""𝙸𝚃'𝚂 𝚂𝙸𝙼𝙿𝙻𝙴 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴. 𝙹𝚄𝚂𝚃 𝚂𝙴𝙽𝙳 𝙰𝙽𝚈 𝙿𝙸𝙲𝚃𝚄𝚁𝙴𝚂 𝙾𝚁 𝚅𝙸𝙳𝙴𝙾𝚂 𝙱𝙴𝙻𝙾𝚆 5𝙼𝙱 𝙰𝙽𝙳 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝙶𝙴𝚃𝚃𝙷𝙴 𝚃𝙶𝚁𝙰𝙿𝙷 𝙻𝙸𝙽𝙺
+""", show_alert=True)
