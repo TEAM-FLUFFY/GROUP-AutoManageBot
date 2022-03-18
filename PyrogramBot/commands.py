@@ -39,18 +39,7 @@ async def start_message(bot, message):
 async def callback(bot,query:  CallbackQuery):
     if query.data == "song":
         await query.message.edit_text(
-            text="""<b>▫️HELP: Telegraph▪️</b>
-
-Do as you wish with telegra.ph module!
-
-</b>USAGE:</b>
-
-🤧 /telegraph - Send me Picture or Vide Under (5MB)
-
-<b>NOTE:</b>
-
-• This Command Is Available in goups and pms
-• This Command Can be used by everyone"""
+            text="/tgraph"
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton("start", callback_data="start")
                 ]]
