@@ -5,8 +5,8 @@ from pyrogram.types import CallbackQuery
 
 
 @Client.on_callback_query()
-async def telegraph_cb(bot, msg)
-    if msg.data == "tgra"
+async def callback(bot: msg):
+    if msg.data == "tgra":
         await.msg.message.edit(
             text="""<b>HELP:</b> Telegraph▪️
 
@@ -27,7 +27,7 @@ NOTE:
         )
 
 
-    elif msg.data == "start"
+    elif msg.data == "start":
         await msg.message.edit(
             text=START_MESSAGE.format(message.from_user.mention),
             reply_markup=InlineKeyboardMarkup( [[
