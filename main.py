@@ -8,4 +8,4 @@ PyrogramBot = Client(
     plugins=dict(root="PyrogramBot")
   )
 
-PyrogramBot.run()
+Client.run()
