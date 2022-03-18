@@ -41,7 +41,7 @@ NOTE:
                 InlineKeyboardButton ("help", callback_data="help")
                 ],[
                 InlineKeyboardButton ("⚜️𝔸𝔻𝔻 𝕄𝔼 𝕋𝕆 𝔸 ℂℍ𝔸𝕋 𝔾ℝ𝕆𝕌ℙ⚜️", url="http://t.me/FluffyPyroGramBot?startgroup=true")
-                ]]
-                )
+               ]]
+               )
         )
     
