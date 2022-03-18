@@ -35,13 +35,4 @@ async def start_message(bot, message):
     
            
 
-@Client.on_callback_query()
-async def callback(bot,query:  CallbackQuery):
-    if query.data == "song":
-        await query.message.edit_text(
-            text="/tgraph"
-        )
-            reply_markup=InlineKeyboardMarkup( [[
-              InlineKeyboardButton("start", callback_data="start")
-              ]]           
-              )
+
