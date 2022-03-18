@@ -7,7 +7,7 @@ from pyrogram.types import CallbackQuery
 @Client.on_callback_query()
 async def callback(bot: msg):
     if msg.data == "tgra":
-        await.msg.message.edit(
+        await msg.message.edit(
             text="""<b>HELP:</b> Telegraph▪️
 
 Do as you wish with telegra.ph module!
