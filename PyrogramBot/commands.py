@@ -51,4 +51,11 @@ Do as you wish with telegra.ph module!
 
 • This Command Is Available in goups and pms
 • This Command Can be used by everyone"""
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("start", callback_data="start")
+                ]]
+          
+         
+            )
+
         )
