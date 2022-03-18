@@ -1,54 +1,48 @@
+@Client.on_message(filters.photo)
+async def uploadphoto(client, message):
+  msg = await message.reply_text("yours text")
+  userid = str(message.chat.id)
+  img_path = (f"./Download....!/{userid}.jpg")
+  img_path = await client.download_media(message=message, file_name=img_path)
+  await msg.edit_text("yours text @septemberfilms")
+  try:
+    tlink = upload_file(img_path)
+  except:
+    await msg.edit_text("yours text @septemberfilms") 
+  else:
+    await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
+    os.remove(img_path) 
 
-import os
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from telegraph import upload_file
-
-@Client.on_message(filters.command(["tgmedia", "tgraph", "telegraph"]))
-async def telegraph(client, message):
-    replied = message.reply_to_message
-    if not replied:
-        await message.reply("Reply to a supported media file")
-        return
-    if not (
-        (replied.photo and replied.photo.file_size <= 5242880)
-        or (replied.animation and replied.animation.file_size <= 5242880)
-        or (
-            replied.video
-            and replied.video.file_name.endswith(".mp4")
-            and replied.video.file_size <= 5242880
-        )
-        or (
-            replied.document
-            and replied.document.file_name.endswith(
-                (".jpg", ".jpeg", ".png", ".gif", ".mp4"),
-            )
-            and replied.document.file_size <= 5242880
-        )
-    ):
-        await message.reply("Not supported!")
-        return
-    download_location = await client.download_media(
-        message=message.reply_to_message,
-        file_name="root/downloads/",
-    )
+@Client.on_message(filters.animation)
+async def uploadgif(client, message):
+  if(message.animation.file_size < 5242880):
+    msg = await message.reply_text("yours text @septemberfilms")
+    userid = str(message.chat.id)
+    gif_path = (f"./DOWNLOADS/{userid}.mp4")
+    gif_path = await client.download_media(message=message, file_name=gif_path)
+    await msg.edit_text("yours text`")
     try:
-        response = upload_file(download_location)
-    except Exception as document:
-        await message.reply(message, text=document)
-    else:
-        await message.reply(
-            f"<b>Link:-</b>\n\n <code>https://telegra.ph{response[0]}</code>",
-            quote=True,
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(text="open link", url=f"https://telegra.ph{response[0]}"),
-                    InlineKeyboardButton(text="share link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
-                ],
-                [InlineKeyboardButton(text="✗ Close ✗", callback_data="close_data")]
-            ]
-        )
-    )
-    finally:
-        os.remove(download_location)
+      tlink = upload_file(gif_path)
+      await msg.edit_text(f"https://telegra.ph{tlink[0]}")   
+      os.remove(gif_path)   
+    except:
+      await msg.edit_text("yours text join @septemberfilms") 
+  else:
+    await message.reply_text("Size Should Be Less Than 5 mb join @septemberfilms")
+
+@Client.on_message(filters.video)
+async def uploadvid(client, message):
+  if(message.video.file_size < 5242880):
+    msg = await message.reply_text("yours text @septemberfilms")
+    userid = str(message.chat.id)
+    vid_path = (f"./DOWNLOADS/{userid}.mp4")
+    vid_path = await client.download_media(message=message, file_name=vid_path)
+    await msg.edit_text("yours text")
+    try:
+      tlink = upload_file(vid_path)
+      await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
+      os.remove(vid_path)   
+    except:
+      await msg.edit_text("yours text join @septemberfilms") 
+  else:
+    await message.reply_text("yours text join @septemberfilms")
