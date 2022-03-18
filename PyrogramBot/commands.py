@@ -47,5 +47,3 @@ async def callback(bot,query:  CallbackQuery):
           
          
             )
-
-        )
